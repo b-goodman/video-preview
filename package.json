@@ -15,8 +15,7 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "build:docs": "npx typedoc --plugin typedoc-plugin-markdown",
-    "publish": "npm publish --access=public"
+    "build:docs": "npx typedoc --plugin typedoc-plugin-markdown"
   },
   "devDependencies": {
     "typedoc": "^0.15.0",
