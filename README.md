@@ -2,6 +2,10 @@
 
 ## Installation
 
+> Requires [ffmpeg](https://www.ffmpeg.org/).
+>
+> You may already have it; check via `ffmpeg -version`
+
 ```javascript
 npm install @bgoodman/video-preview
 
@@ -29,5 +33,3 @@ Name | Type | Description |
 `duration` | number | duration (sec.) of preview.  |
 
 **Returns:** *Promise‹string›*
-
-
