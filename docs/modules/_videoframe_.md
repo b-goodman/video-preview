@@ -4,17 +4,52 @@
 
 ## Index
 
+### Variables
+
+* [exec](_videoframe_.md#const-exec)
+
 ### Functions
 
+* [videoFrame](_videoframe_.md#const-videoframe)
 * [videoFrameSequence](_videoframe_.md#const-videoframesequence)
 
+## Variables
+
+### `Const` exec
+
+• **exec**: *Function* =  util.promisify(require('child_process').exec)
+
+*Defined in [videoFrame.ts:3](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/videoFrame.ts#L3)*
+
 ## Functions
+
+### `Const` videoFrame
+
+▸ **videoFrame**(`input`: string, `output`: string, `time?`: undefined | number): *Promise‹string›*
+
+*Defined in [videoFrame.ts:12](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/videoFrame.ts#L12)*
+
+Extracts a single frame from a video at a specified time or at 00:00:00 if a time is not given.
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`input` | string | filepath of input video. |
+`output` | string | filepath for generated frame. |
+`time?` | undefined &#124; number | - |
+
+**Returns:** *Promise‹string›*
+
+filepath of generated frame.
+
+___
 
 ### `Const` videoFrameSequence
 
 ▸ **videoFrameSequence**(`input`: string, `output`: string, `fps`: number): *Promise‹string›*
 
-*Defined in [videoFrame.ts:28](https://github.com/b-goodman/video-preview/blob/9f0084e/src/videoFrame.ts#L28)*
+*Defined in [videoFrame.ts:28](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/videoFrame.ts#L28)*
 
 Extracts a single frame from a video at a specified time.
 

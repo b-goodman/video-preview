@@ -64,7 +64,6 @@
     "mode": "modules",
     "out": "docs",
     "name": "video-preview",
-    "readme": "none",
-    "excludeNotExported": true
+    "readme": "none"
 }
 }
