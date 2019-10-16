@@ -1,0 +1,24 @@
+{
+  "name": "video-preview",
+  "description": "A minimal library for creating preview content for video files.",
+  "keywords": [
+    "ffmpeg",
+    "video",
+    "thumbnail",
+    "preview"
+  ],
+  "version": "1.0.0",
+  "main": "./lib/index.js",
+  "files": [
+    "./lib"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "tsc",
+    "build:docs": "npx typedoc --plugin typedoc-plugin-markdown"
+  },
+  "devDependencies": {
+    "typedoc": "^0.15.0",
+    "typedoc-plugin-markdown": "^2.2.11"
+  }
+}
