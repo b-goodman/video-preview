@@ -33,5 +33,6 @@
     "doc": "docs",
     "lib": "lib"
   },
-  "author": "benjamin goodman"
+  "author": "benjamin goodman",
+  "dependencies": {}
 }

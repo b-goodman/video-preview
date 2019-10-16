@@ -1,0 +1,33 @@
+# @bgoodman/video-preview
+
+## Installation
+
+```javascript
+npm install @bgoodman/video-preview
+
+yarn add @bgoodman/video-preview
+```
+
+## Usage
+
+```javascript
+import videoPreview from "@bgoodman/video-preview"
+```
+
+## API
+
+**videoPreview**(`input`: string, `output`: string, `duration`: number): *Promise‹string›*
+
+Saves a slice of video to file.
+
+**Parameters:**
+
+Name | Type | Description |
+------ | ------ | ------ |
+`input` | string | filepath of input video. |
+`output` | string | filepath of preview. |
+`duration` | number | duration (sec.) of preview.  |
+
+**Returns:** *Promise‹string›*
+
+
