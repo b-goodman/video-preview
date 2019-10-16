@@ -4,21 +4,9 @@
 
 ## Index
 
-### Variables
-
-* [exec](_videopreview_.md#const-exec)
-
 ### Functions
 
 * [videoPreview](_videopreview_.md#const-videopreview)
-
-## Variables
-
-### `Const` exec
-
-• **exec**: *Function* =  util.promisify(require('child_process').exec)
-
-*Defined in [videoPreview.ts:3](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/videoPreview.ts#L3)*
 
 ## Functions
 
@@ -26,7 +14,7 @@
 
 ▸ **videoPreview**(`input`: string, `output`: string, `duration`: number): *Promise‹string›*
 
-*Defined in [videoPreview.ts:11](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/videoPreview.ts#L11)*
+*Defined in [videoPreview.ts:14](https://github.com/b-goodman/video-preview/blob/33df2b5/src/videoPreview.ts#L14)*
 
 Saves a slice of video to file.
 

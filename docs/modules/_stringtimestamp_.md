@@ -15,7 +15,7 @@
 
 ▸ **convertTime**(`time`: number): *object*
 
-*Defined in [stringTimestamp.ts:4](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/stringTimestamp.ts#L4)*
+*Defined in [stringTimestamp.ts:4](https://github.com/b-goodman/video-preview/blob/33df2b5/src/stringTimestamp.ts#L4)*
 
 convert seconds to an hours/minutes/seconds format.
 
@@ -39,7 +39,7 @@ ___
 
 ▸ **stringTimestamp**(`time`: number): *string*
 
-*Defined in [stringTimestamp.ts:15](https://github.com/b-goodman/video-preview/blob/1aca6e6/src/stringTimestamp.ts#L15)*
+*Defined in [stringTimestamp.ts:15](https://github.com/b-goodman/video-preview/blob/33df2b5/src/stringTimestamp.ts#L15)*
 
 Convert seconds to a 'HH:MM:SS' string timestamp.
 

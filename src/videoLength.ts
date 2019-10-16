@@ -1,4 +1,7 @@
 import util from 'util';
+/**
+ * @ignore
+ */
 const exec = util.promisify(require('child_process').exec);
 
 const videoLength = async (input: string) => {
