@@ -6,6 +6,7 @@
 
 ### External modules
 
+* ["fileExists"](modules/_fileexists_.md)
 * ["index"](modules/_index_.md)
 * ["stringTimestamp"](modules/_stringtimestamp_.md)
 * ["videoFrame"](modules/_videoframe_.md)

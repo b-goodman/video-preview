@@ -1,9 +1,6 @@
+import fileExists from "./fileExists";
 import stringTimestamp from "./stringTimestamp";
-import util from 'util';
-/**
- * @ignore
- */
-const exec = util.promisify(require('child_process').exec);
+import { exec } from 'child_process';
 
 /**
  * Saves a slice of video to file.
@@ -11,13 +8,19 @@ const exec = util.promisify(require('child_process').exec);
  * @param output filepath of preview.
  * @param duration duration (sec.) of preview.
  */
-const videoPreview = async (input:string, output: string, duration: number) => {
-    const {stdout, stderr} = await exec(`ffmpeg -ss 00:00:01 -i ${input} -t ${stringTimestamp(duration)} -vcodec copy -acodec copy ${output}`);
-    if (stderr) {
-        throw new Error(stderr)
-    } else {
-        return output;
-    }
+const videoPreview = (input:string, output: string, duration: number, opts?:{overwrite?: boolean} ) => {
+    return new Promise<{output: string, stdout: string, stderr: string}>( async (resolve, reject) => {
+        if (! (opts && opts.overwrite) && fileExists(input)) {
+            reject(new Error(`'${output}' already exists.  Delete file or use {overwrite: true}`));
+        };
+        const cmd = `ffmpeg ${opts && opts.overwrite ? `-y` : ``} -ss 00:00:00 -i ${input} -t ${stringTimestamp(duration)} -vcodec copy -acodec copy ${output}`;
+        exec(cmd,  (error, stdout, stderr) => {
+            if (error) {
+                reject(error)
+            }
+            resolve({output, stdout, stderr});
+        });
+    })
 }
 
 export default videoPreview;

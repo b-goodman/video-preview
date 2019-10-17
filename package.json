@@ -7,7 +7,7 @@
     "thumbnail",
     "preview"
   ],
-  "version": "1.0.4-beta",
+  "version": "1.0.5-beta",
   "main": "lib/index.js",
   "files": [
     "lib"
@@ -19,7 +19,8 @@
   },
   "devDependencies": {
     "typedoc": "^0.15.0",
-    "typedoc-plugin-markdown": "^2.2.11"
+    "typedoc-plugin-markdown": "^2.2.11",
+    "typescript": "^3.6.4"
   },
   "repository": {
     "type": "git",

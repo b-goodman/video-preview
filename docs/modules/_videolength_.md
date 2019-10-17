@@ -14,7 +14,7 @@
 
 ▸ **videoLength**(`input`: string): *Promise‹number›*
 
-*Defined in [videoLength.ts:7](https://github.com/b-goodman/video-preview/blob/33df2b5/src/videoLength.ts#L7)*
+*Defined in [videoLength.ts:7](https://github.com/b-goodman/video-preview/blob/55b5772/src/videoLength.ts#L7)*
 
 **Parameters:**
 

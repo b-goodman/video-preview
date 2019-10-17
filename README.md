@@ -20,7 +20,7 @@ import videoPreview from "@bgoodman/video-preview"
 
 ## API
 
-**videoPreview**(`input`: string, `output`: string, `duration`: number): *Promise‹string›*
+**videoPreview**(`input`: string, `output`: string, `duration`: number, {`overwrite`?: boolean}): *Promise<{output: string, stdout: string, stderr: string}>*
 
 Saves a slice of video to file.
 
@@ -31,5 +31,4 @@ Name | Type | Description |
 `input` | string | filepath of input video. |
 `output` | string | filepath of preview. |
 `duration` | number | duration (sec.) of preview.  |
-
-**Returns:** *Promise‹string›*
+`overwrite` | boolean | replaces `output` if file exists. |
