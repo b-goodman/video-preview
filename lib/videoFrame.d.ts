@@ -7,6 +7,10 @@
  */
 declare const videoFrame: (input: string, output: string, time?: number | undefined, opts?: {
     overwrite?: boolean | undefined;
-} | undefined) => Promise<unknown>;
+} | undefined) => Promise<{
+    output: string;
+    stdout: string;
+    stderr: string;
+}>;
 export default videoFrame;
 //# sourceMappingURL=videoFrame.d.ts.map
