@@ -9,7 +9,7 @@ import { exec } from 'child_process';
  * @param duration duration (sec.) of preview.
  */
 const videoPreview = (input:string, output: string, duration: number, opts?:{overwrite?: boolean} ) => {
-    return new Promise<{output: string, stdout: string, stderr: string}>( async (resolve, reject) => {
+    return new Promise<{output: string, stdout: string, stderr: string}>( (resolve, reject) => {
         if (! (opts && opts.overwrite) && fileExists(input)) {
             reject(new Error(`'${output}' already exists.  Delete file or use {overwrite: true}`));
         };

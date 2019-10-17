@@ -10,7 +10,7 @@ import { exec } from 'child_process';
  * @returns filepath of generated frame.
  */
 const videoFrame = (input: string, output: string, time?: number, opts?:{overwrite?: boolean}) => {
-    return new Promise( async (resolve, reject) => {
+    return new Promise<{output: string, stdout: string, stderr: string}>( (resolve, reject) => {
         if (! (opts && opts.overwrite) && fileExists(input)) {
             reject(new Error(`'${output}' already exists.  Delete file or use {overwrite: true}`));
         };
