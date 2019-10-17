@@ -20,7 +20,9 @@ import videoPreview from "@bgoodman/video-preview"
 
 ## API
 
-**videoPreview**(`input`: string, `output`: string, `duration`: number, {`overwrite`?: boolean}): *Promise<{output: string, stdout: string, stderr: string}>*
+### `videoPreview`
+
+**videoPreview**(`input`: string, `output`: string, opts?: VideoPreviewOptions): *Promise<{output: string, stdout: string, stderr: string}>*
 
 Saves a slice of video to file.
 
@@ -30,5 +32,12 @@ Name | Type | Description |
 ------ | ------ | ------ |
 `input` | string | filepath of input video. |
 `output` | string | filepath of preview. |
-`duration` | number | duration (sec.) of preview.  |
-`overwrite` | boolean | replaces `output` if file exists. |
+
+**Options:**
+
+Name | Default | Description |
+------ | ------ | ------ |
+`overwrite` | true | overwrite output file if exists.
+`duration` | 5 | specify length of preview (seconds)
+`scale.width` | -1 | set x-axis scale (px).  Default leaves output unchanged.
+`scale.height`| -2 | set y-axis scale (px).  Default preserves aspect ratio, rounding to a factor of 2.

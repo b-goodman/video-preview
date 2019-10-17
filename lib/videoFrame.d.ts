@@ -5,9 +5,15 @@
  * @param [time] position (seconds) in video to extract frame.
  * @returns filepath of generated frame.
  */
-declare const videoFrame: (input: string, output: string, time?: number | undefined, opts?: {
-    overwrite?: boolean | undefined;
-} | undefined) => Promise<{
+interface VideoFrameOptions {
+    overwrite?: boolean;
+    time?: number;
+    scale?: {
+        width?: number;
+        height?: number;
+    };
+}
+declare const videoFrame: (input: string, output: string, opts?: VideoFrameOptions | undefined) => Promise<{
     output: string;
     stdout: string;
     stderr: string;

@@ -9,12 +9,35 @@ import { exec } from 'child_process';
  * @param [time] position (seconds) in video to extract frame.
  * @returns filepath of generated frame.
  */
-const videoFrame = (input: string, output: string, time?: number, opts?:{overwrite?: boolean}) => {
+
+ //scale=320:-2
+
+interface VideoFrameOptions {
+    overwrite?: boolean;
+    time?: number;
+    scale?: {
+        width?:number;
+        height?:number
+    }
+}
+const videoFrame = (input: string, output: string, opts?:VideoFrameOptions) => {
+
+    const defaultOptions = {
+        overwrite: true,
+        time: 0,
+        scale: {
+            width: -1,
+            height: -2
+        }
+    }
+
+    const options = Object.assign( defaultOptions, opts);
+
     return new Promise<{output: string, stdout: string, stderr: string}>( (resolve, reject) => {
-        if (! (opts && opts.overwrite) && fileExists(input)) {
+        if (! (options.overwrite) && fileExists(input)) {
             reject(new Error(`'${output}' already exists.  Delete file or use {overwrite: true}`));
         };
-        const cmd =  `ffmpeg ${opts && opts.overwrite ? `-y` : ``} -i ${input} -ss ${stringTimestamp(time || 0)} -vframes 1 ${output}`;
+        const cmd =  `ffmpeg ${options.overwrite ? `-y` : ``} -i ${input} -vf scale=${options.scale.width || -1}:${options.scale.height || -2} -ss ${stringTimestamp(options.time || 0)} -vframes 1 ${output}`;
         exec(cmd,  (error, stdout, stderr) => {
             if (error) {
                 reject(error)
