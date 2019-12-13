@@ -27,7 +27,7 @@ const videoFrame = (input: string, output: string, opts?:VideoFrameOptions) => {
         time: 0,
         scale: {
             width: 320,
-                height: -1
+            height: -1
         }
     }
 
