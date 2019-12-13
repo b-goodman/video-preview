@@ -37,7 +37,7 @@ const videoFrame = (input: string, output: string, opts?:VideoFrameOptions) => {
         if (! (options.overwrite) && fileExists(input)) {
             reject(new Error(`'${output}' already exists.  Delete file or use {overwrite: true}`));
         };
-        const cmd =  `ffmpeg ${options.overwrite ? `-y` : ``} -i ${input} -vf scale=${options.scale.width}:${options.scale.height} -ss ${stringTimestamp(options.time || 0)} -vframes 1 ${output}`;
+        const cmd =  `ffmpeg ${options.overwrite ? `-y` : ``} -i ${input} -vf scale=${options.scale.width || 320}:${options.scale.height || -1} -ss ${stringTimestamp(options.time || 0)} -vframes 1 ${output}`;
         exec(cmd,  (error, stdout, stderr) => {
             if (error) {
                 reject(error)
