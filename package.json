@@ -7,7 +7,7 @@
     "thumbnail",
     "preview"
   ],
-  "version": "1.0.9-beta",
+  "version": "1.1.9-beta",
   "main": "lib/index.js",
   "files": [
     "lib"
