@@ -1,0 +1,1 @@
+{"version":3,"file":"videoFrame.d.ts","sourceRoot":"","sources":["../../src/videoFrame.ts"],"names":[],"mappings":"AAIA;;;;;;GAMG;AAIH,UAAU,iBAAiB;IACvB,SAAS,CAAC,EAAE,OAAO,CAAC;IACpB,IAAI,CAAC,EAAE,MAAM,CAAC;IACd,KAAK,CAAC,EAAE;QACJ,KAAK,CAAC,EAAC,MAAM,CAAC;QACd,MAAM,CAAC,EAAC,MAAM,CAAA;KACjB,CAAA;CACJ;AACD,QAAA,MAAM,UAAU;;;;EAyBf,CAAC;AAkBF,eAAe,UAAU,CAAC"}

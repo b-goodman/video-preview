@@ -15,9 +15,15 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "build:docs": "npx typedoc --plugin typedoc-plugin-markdown"
+    "build:docs": "npx typedoc --plugin typedoc-plugin-markdown",
+    "test": "./node_modules/.bin/jest"
   },
   "devDependencies": {
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.14",
+    "fs-extra": "^8.1.0",
+    "jest": "^24.9.0",
+    "ts-jest": "^24.2.0",
     "typedoc": "^0.15.0",
     "typedoc-plugin-markdown": "^2.2.11",
     "typescript": "^3.6.4"
@@ -35,5 +41,7 @@
     "lib": "lib"
   },
   "author": "benjamin goodman",
-  "dependencies": {}
+  "dependencies": {
+    "@types/fs-extra": "^8.0.1"
+  }
 }
